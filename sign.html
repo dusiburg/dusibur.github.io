@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Модальный -->
+<div id="myModal" class="modal">
+  <!-- Модальное содержание -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Подпись является официальной и подтверждённой в файловой системе Дусибурга</p>
+  </div>
+</div>
+<div id="container">
+        <div id="container-bg">
+            <div class="bg black"></div>
+            <div class="bg white"></div>
+        </div>
+        <div id="c-container">
+            <div id="ideas">
+                <div class="idea">
+                    <div id="idea-text-left" class="idea-text">Dusiburg's</div>
+                </div>
+                <div class="idea">
+                    <div id="idea-text-right" class="idea-text">Server</div>
+                </div>
+            </div>
+            <canvas id="c"></canvas>
+        </div>
+    </div>
+<!-- partial -->
+  <script src='TimelineMax.min.js'></script>
+<script src='TweenMax.min.js'></script>
+<script src='jquery-2.2.4.js'></script>
+<script src='browser.min.js'></script>
+<script src='imagesloaded.pkgd.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+<script>
+  // Получить модальный
+var modal = document.getElementById("myModal");
+
+
+// Получить элемент <span>, который закрывает модальный
+var span = document.getElementsByClassName("close")[0];
+
+
+// Когда пользователь нажимает на <span> (x), закройте модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
